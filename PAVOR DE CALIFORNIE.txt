@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide du Pavot de Californie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Roboto', sans-serif; line-height: 1.6; background-color: #fff8f0; color: #333; scroll-behavior: smooth;}
+        header { background: linear-gradient(90deg,#ffb347,#ffcc33); padding: 20px; text-align: center; position: sticky; top: 0; z-index: 1000; }
+        header h1 { color: #4a2c2a; font-size: 2.2em; }
+        nav { display: flex; justify-content: center; background: #ffc371; flex-wrap: wrap; position: sticky; top: 70px; z-index: 999;}
+        nav a { color: #4a2c2a; padding: 10px 15px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+        nav a:hover { background-color: #ffdbac; border-radius: 5px; }
+        section { padding: 60px 20px; max-width: 1000px; margin: auto; border-bottom: 2px solid #ffe0b2; border-radius: 10px; margin-bottom: 40px; }
+        section:nth-child(even) { background-color: #fff3e0; }
+        h2 { color: #d35400; margin-bottom: 15px; }
+        img { max-width: 100%; height: auto; border: 3px solid #ffc371; border-radius: 10px; margin: 15px 0; cursor: pointer; transition: transform 0.3s; }
+        img:hover { transform: scale(1.05); }
+        .caption { font-size: 0.9em; text-align: center; color: #666; margin-bottom: 30px; }
+        ul, ol { margin-left: 20px; margin-bottom: 20px; }
+        .btn { display: inline-block; background: #ffb347; color: #4a2c2a; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 20px; transition: 0.3s; }
+        .btn:hover { background: #ffcc33; }
+        footer { text-align: center; padding: 20px; background: #ffb347; color: #4a2c2a; margin-top: 40px;}
+        @media (max-width: 768px) { nav { flex-direction: column; } }
+        /* Lightbox Gallery */
+        .lightbox { display:none; position:fixed; z-index:10000; padding-top:60px; left:0; top:0; width:100%; height:100%; overflow:auto; background-color: rgba(0,0,0,0.9);}
+        .lightbox-content { margin:auto; display:block; max-width:90%; max-height:80%; }
+        .close { position:absolute; top:30px; right:35px; color:#fff; font-size:40px; font-weight:bold; cursor:pointer; }
+        .close:hover { color:#bbb; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Guide du Pavot de Californie</h1>
+</header>
+
+<nav>
+    <a href="#presentation">Présentation</a>
+    <a href="#conditions">Conditions</a>
+    <a href="#semis">Semis</a>
+    <a href="#entretien">Entretien</a>
+    <a href="#recolte">Récolte</a>
+    <a href="#erreurs">Erreurs</a>
+    <a href="#faq">FAQ</a>
+    <a href="#bibliographie">Bibliographie</a>
+</nav>
+
+<section id="presentation">
+    <h2>Présentation de la plante</h2>
+    <ul>
+        <li><strong>Nom scientifique :</strong> Eschscholzia californica</li>
+        <li><strong>Origine :</strong> Ouest des États-Unis et Nord du Mexique</li>
+        <li><strong>Couleur :</strong> Orange vif à jaune clair</li>
+        <li><strong>Durée de vie :</strong> Plante annuelle</li>
+        <li><strong>Type de sol :</strong> Léger, bien drainé, sableux ou rocailleux</li>
+    </ul>
+    <img src="pavot_origine.jpg" alt="Carte origine Pavot" onclick="openLightbox(this.src)">
+    <div class="caption">Origine du pavot de Californie</div>
+    <a href="#conditions" class="btn">Voir la prochaine étape</a>
+</section>
+
+<section id="conditions">
+    <h2>Conditions idéales</h2>
+    <ul>
+        <li>Plein soleil, minimum 6h/jour</li>
+        <li>Sol léger et bien drainé</li>
+        <li>Arrosage modéré</li>
+        <li>Espacement 20-30 cm</li>
+        <li>Semis idéal au printemps</li>
+    </ul>
+    <img src="pavot_conditions.jpg" alt="Diagramme lumière et eau" onclick="openLightbox(this.src)">
+    <div class="caption">Lumière et arrosage idéals</div>
+    <a href="#semis" class="btn">Voir la prochaine étape</a>
+</section>
+
+<section id="semis">
+    <h2>Semis & plantation</h2>
+    <ol>
+        <li>Semer en pleine terre après les derniers gels</li>
+        <li>Préparer le sol avec pots et terre</li>
+        <li>Ne pas perturber les racines</li>
+        <li>Documenter chaque étape avec photos</li>
+    </ol>
+    <img src="pavot_semis.jpg" alt="Semis Pavot" onclick="openLightbox(this.src)">
+    <div class="caption">Semis du pavot</div>
+    <a href="#entretien" class="btn">Voir la prochaine étape</a>
+</section>
+
+<section id="entretien">
+    <h2>Entretien après germination</h2>
+    <ul>
+        <li>Arrosage modéré</li>
+        <li>Supprimer fleurs fanées</li>
+        <li>Éclaircir semis</li>
+        <li>Éviter excès d'engrais</li>
+        <li>Surveiller le drainage</li>
+    </ul>
+    <img src="pavot_entretien.jpg" alt="Entretien Pavot" onclick="openLightbox(this.src)">
+    <div class="caption">Arrosage et entretien</div>
+    <a href="#recolte" class="btn">Voir la prochaine étape</a>
+</section>
+
+<section id="recolte">
+    <h2>Récolte & graines</h2>
+    <ul>
+        <li>Attendre que capsules sèchent</li>
+        <li>Ramasser et conserver les graines</li>
+        <li>Planifier semis pour l'année suivante</li>
+    </ul>
+    <img src="pavot_graines.jpg" alt="Graines Pavot" onclick="openLightbox(this.src)">
+    <div class="caption">Récolte des graines</div>
+    <a href="#erreurs" class="btn">Voir la prochaine étape</a>
+</section>
+
+<section id="erreurs">
+    <h2>Erreurs fréquentes</h2>
+    <ul>
+        <li>Semer trop profond</li>
+        <li>Sol mal drainé ou trop arrosé</li>
+        <li>Manque de soleil</li>
+        <li>Repiquage des racines</li>
+        <li>Trop d’engrais</li>
+    </ul>
+    <img src="pavot_erreurs.jpg" alt="Erreurs Pavot" onclick="openLightbox(this.src)">
+    <div class="caption">Erreurs à éviter</div>
+    <a href="#faq" class="btn">Voir la prochaine étape</a>
+</section>
+
+<section id="faq">
+    <h2>FAQ / Conseils pratiques</h2>
+    <ul>
+        <li><strong>Germination :</strong> 14 à 21 jours</li>
+        <li><strong>Floraison :</strong> 60 à 90 jours</li>
+        <li><strong>Arrosage :</strong> Sol légèrement humide</li>
+    </ul>
+    <a href="#bibliographie" class="btn">Voir la prochaine étape</a>
+</section>
+
+<section id="bibliographie">
+    <h2>Bibliographie</h2>
+    <ul>
+        <li>Hodgson, Larry. 13 plantes extérieures qui poussent rapidement. 16 mai 2019. Coup de Pouce – Jardinage</li>
+        <li>Brown, Mark. How to Create Step‑by‑Step Guides Users will LOVE! YouTube, 14 juin 2024. <a href="https://www.youtube.com/watch?v=TEdxze71nTU" target="_blank">Lien</a></li>
+        <li>The Spruce. 2023. Guide de culture du pavot de Californie. <a href="https://www.thespruce.com/how-to-grow-and-care-for-california-poppies-4686987" target="_blank">Lien</a></li>
+        <li>Western Native Seed. 2023. Native California Poppy Profile. <a href="https://www.westernnativeseed.com" target="_blank">Lien</a></li>
+    </ul>
+</section>
+
+<footer>
+    &copy; 2025 Sinnathamby Steepan
+</footer>
+
+<!-- Lightbox script -->
+<div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+</div>
+
+<script>
+    function openLightbox(src) {
+        document.getElementById('lightbox').style.display = 'block';
+        document.getElementById('lightbox-img').src = src;
+    }
+    function closeLightbox() {
+        document.getElementById('lightbox').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
